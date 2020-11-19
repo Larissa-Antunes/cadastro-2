@@ -27,14 +27,10 @@ class Cliente {
         document.getElementById('codigo').setAttribute('disabled','disabled')
         document.getElementById('codigo').value = cliente.codigo
         document.getElementById('nome').value = cliente.nome
-        document.getElementById('cep').value = cliente.cep
-        document.getElementById('endereco').value = cliente.endereco
-        document.getElementById('bairro').value = cliente.bairro
-        document.getElementById('cidade').value = cliente.cidade
-        document.getElementById('observacoes').value = cliente.observacoes
-        document.getElementById('limite').value = cliente.limite
-        document.getElementById('utilizado').value = cliente.utilizado
-        document.getElementById('saldo').value = cliente.saldo
+        document.getElementById('cpf').value = cliente.cpf
+        document.getElementById('valordoado').value = cliente.valordoado
+        document.getElementById('recado').value = cliente.recado
+   
     }
     
     lista(){
@@ -42,12 +38,9 @@ class Cliente {
             `<tr>
             <td>${cliente.codigo}</td>
             <td>${cliente.nome}</td>
-            <td>${cliente.cep}</td>
-            <td>${cliente.endereco}</td>
-            <td>${cliente.bairro}</td>
-            <td>${cliente.cidade}</td>
-            <td>${cliente.observacoes}</td>
-            <td>${cliente.saldo}</td>
+            <td>${cliente.cpf}</td>
+            <td>${cliente.valordoado}</td>
+            <td>${cliente.recado}</td>
             <td>
                 <button id='apagar' onClick='cliente.apaga(${cliente.codigo})'>
                 🗑️Apagar</button>
@@ -58,16 +51,13 @@ class Cliente {
             `
         ))
         return (`<table border='1' class='paleBlueRows'>
-        <caption>Relação dos Clientes</caption>
+        <caption>Relação dos Doadores</caption>
         <thead>
             <th>Código</th>  
             <th>Nome</th> 
-            <th>CEP</th> 
-            <th>Endereço</th> 
-            <th>Bairro</th>  
-            <th>Cidade</th> 
-            <th>Observações</th>
-            <th>Saldo</th>
+            <th>CPF</th> 
+            <th>Valor Doado</th> 
+            <th>Recado</th>
             <th>Opções</th>
         </thead>
         <tbody>${listagem}</tbody>      
@@ -87,26 +77,14 @@ document.getElementById('salvar').onclick = function ()  {
     const registro = {
         codigo: document.getElementById('codigo').value,
         nome: document.getElementById('nome').value,
-        cep: document.getElementById('cep').value,
-        endereco: document.getElementById('endereco').value,
-        bairro: document.getElementById('bairro').value,
-        cidade: document.getElementById('cidade').value,
-        observacoes: document.getElementById('observacoes').value,
-        limite: document.getElementById('limite').value,
-        utilizado: document.getElementById('utilizado').value,
-        saldo: document.getElementById('saldo').value
+        cpf: document.getElementById('cpf').value,
+        valordoado: document.getElementById('valordoado').value,
+        recado: document.getElementById('recado').value
+
     } 
     cliente.salva(registro)
 }
 //tratamos a listagem
 window.onload = function(){
     cliente.atualiza()
-}
-//tratamos a alteração do campo utilizado
-document.getElementById('utilizado').onchange = function ()  {
-let limite = document.getElementById('limite').value
-let utilizado = document.getElementById('utilizado').value
-let saldo = (limite - utilizado)
-document.getElementById('saldo').value = saldo.toFixed(2)
-
 }

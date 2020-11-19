@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+*{
+  font-family: 'Open Sans', sans-serif;
+}
+
 .menu {
     background-color: #5F5F5F;
     overflow: hidden;
@@ -5,7 +10,8 @@
 }
 .menu a{
     float: left;
-    color: #F1F1F1;
+    color: black;
+    font-weight: 1000;
     text-align: center;
     padding: 10px;
     font-size: 17px;
@@ -16,20 +22,45 @@
     color: black;
 }
 .menu a.ativo{
-    background-color: #4CAF50;
+    background-color: #E8674A;
     color: white;
 }
-
-
+button:hover,
+button:focus {
+    background-color: #40547e;
+}
+fieldset{
+  border-radius:15px;
+  display: block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border: 2px groove (internal value);
+}
+body{
+  background-color:#DCDCDC;
+}
 .form{
-background-color: #0b6fa4;
+background-color: #edf1f3;
 color: whitesmoke;
+font-weight: 1000;
+color: black;
+background-image: url(https://c.wallhere.com/photos/53/7d/dog_puppies_animals-111487.jpg!d)
 }
 
 .form-group{
-   display: flex;
+   display: block;
    flex-direction: row;
+   padding: 9px;
+   
     }
+.img{
+  height: 50%;
+  padding: 45px;
+}
 
     .form-group label{
         flex: none;
@@ -48,14 +79,16 @@ color: whitesmoke;
 
         .form-group .input-control {
             display: block;
+            height: 10px;
             margin-bottom: 10px;
             margin-right: 8px;
-            padding: 4px;
+            padding: 13px;
             flex: 1 1 auto;
+            border-radius: 5px;
 
         }
         button{
-            color: #5F5F5F;
+            color:black;
             background-color: #98cae6;
             font-size: 15px;
             padding: 5px;
@@ -67,7 +100,7 @@ color: whitesmoke;
         /*estilo da tebela*/
 
         table.blueTable {
-            border: 1px solid #1C6EA4;
+            border: 3px solid #1C6EA4;
             background-color: #EEEEEE;
             width: 100%;
             text-align: left;
@@ -75,7 +108,7 @@ color: whitesmoke;
           }
           table.blueTable td, table.blueTable th {
             border: 1px solid #AAAAAA;
-            padding: 3px 2px;
+            padding: 4px 2px;
           }
           table.blueTable tbody td {
             font-size: 13px;
@@ -123,3 +156,7 @@ color: whitesmoke;
             padding: 2px 8px;
             border-radius: 10px;
           }
+          .menu{
+            background-image: url(https://image.shutterstock.com/image-vector/puppies-dog-seamless-pattern-vector-600w-676055839.jpg) 
+            }
+             

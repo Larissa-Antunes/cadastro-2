@@ -9,54 +9,41 @@
 <body>
     <div class="menu">
         <a class="ativo" href="#">Início</a>
-        <a href="#produtos">Produtos</a>
-        <a href="#clientes">Clientes</a>
+        <a href="fotos.html">Fotos</a>
+        <a href="#parceiros">Seja Parceiro</a>
+        <a href="login.html">Sair</a>
     </div>
     <div class="form">
         <form name="frmCliente">
             <fieldset>
-                <legend>Cadastro de Clientes</legend>
+                <legend>Cadastro de Doadores</legend>
                 <div class="form-group">
-                    <label>Codigo</label>
-                    <input class="input-control" type="number" size="50" id="codigo" />
-                    <label class="right-inline">Nome</label>
-                    <input class="input-control" type="text" size="40" id="nome" />
-                    <label class="right-inline">CEP</label>
-                    <input class="input-control" type="text" size="10" id="cep" />
+                    <label>Codigo da instituição</label>
+                    <input class="input-control" type="number" size="10" id="codigo" />
+                    <label class=>Nome</label>
+                    <input class="input-control" type="text" size="30" id="nome" />
+                    <label class=>CPF</label>
+                    <input class="input-control" type="number" size="10" id="cpf" />
                 </div>
                 <div class="form-group">
-                    <label> Endereco </label>
-                    <input class="input-control" type="text" size="50" id="endereco" />
-                    <label class="right-inline">Bairro</label>
-                    <input class="input-control" type="text" size="40" id="bairro" />
-                    <label class="right-inline">Cidade</label>
-                    <input class="input-control" type="text" size="10" id="cidade" />
+                  
+                    <label class=>Valor Doado</label>
+                    <input class="input-control" type="number" size="40" id="valordoado" />
                 </div>
                 <div class="form-group">
-                    <label> Observações </label>
-                    <textarea class="input-control" id="observacoes" ></textarea>            
+                    <label> Deixe um recado para a equipe! </label>
+                    <textarea class="input-control" id="recado" maxlength="100%"></textarea>            
                 </div>
 
-                <div class="form-group">
-
-                    <label> Limite de crédito</label>
-                    <input class="input-control" type="number" size="10" id="limite"/>
-                    <label>Limite ja utilizado</label>
-                    <input class="input-control" type="number" size="10" id="utilizado"/>
-                    <label class="right-inline">Saldo</label>
-                    <input class="input-control" type="number" size="10" id="saldo" disabled/>
-
-
-
-                </div>
 
                 <div class="form-group">
-                    <label></label>
-                    <button id="salvar"> 💾 Salvar</button>
-                    <button id="cancelar"> ❌ Cancelar</button>
+                    <label> </label>
+                    <button id="salvar"> 💾 Salvar </button>
+                    <button id="cancelar"> ❌ Cancelar </button>
                 </div>
             </fieldset>
         </form>
+
         <div id="listagem"></div>
         <script src="cliente.js"></script>
   
